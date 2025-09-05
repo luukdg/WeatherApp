@@ -63,7 +63,7 @@ body {
   position: relative;
   overflow: hidden;
   scale: 1;
-  transition: scale 0.2s ease-in-out;
+  transition: scale 0.2s ease-in-out, opacity 0.2s ease-in;
 }
 
 .weather-reveal {
@@ -134,5 +134,28 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .weather {
+    width: 90vw;
+  }
+  .temp {
+    padding: 0px;
+    align-items: center;
+  }
+  .info-wrapper {
+    flex-direction: column;
+  }
+  .temp-wrapper {
+    justify-content: center;
+  }
+  .info {
+    border: 0px;
+    padding: 0px;
+  }
+  .content {
+    margin-top: 75px;
   }
 }

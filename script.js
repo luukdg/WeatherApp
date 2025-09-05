@@ -28,6 +28,11 @@ async function getApi(location) {
     const windSpeedData = weatherData.currentConditions.windspeed;
     const humidityData = weatherData.currentConditions.humidity;
 
+    if (ticketStatus === 0) {
+      document.querySelector(".weather").classList.remove("transition");
+      ticketStatus = 1;
+    }
+
     document.querySelector(".condition").textContent = conditionData;
     document.querySelector(".location").textContent = locationData;
     document.querySelector(".temp").textContent = currentTempData.toFixed(0);
