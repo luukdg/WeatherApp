@@ -6,11 +6,36 @@
     <title>Document</title>
     <script type="module" src="./script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <div class="header">
         <input class="search" type="text" placeholder="Search location..." />
+      </div>
+      <div class="content">
+        <div class="weather">
+          <div class="weather-wrapper">
+            <div class="condition"></div>
+            <div class="location"></div>
+          </div>
+          <div class="info-wrapper">
+            <div class="temp-wrapper">
+              <div class="temp"></div>
+              <div class="celsius">°C</div>
+            </div>
+            <div class="info">
+              <div class="feels-like"></div>
+              <div class="wind"></div>
+              <div class="humidity"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
