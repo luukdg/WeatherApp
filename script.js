@@ -7,6 +7,7 @@ input.addEventListener("keydown", (event) => {
     location = input.value;
     input.value = "";
 
+    input.blur();
     document.querySelector(".weather").classList.add("weather-reveal");
     document.querySelector(".weather-wrapper").classList.add("transition");
     document.querySelector(".info-wrapper").classList.add("transition");
