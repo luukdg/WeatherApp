@@ -34,6 +34,7 @@ async function getApi(location) {
       ticketStatus = 1;
     }
 
+    document.querySelector(".error").classList.remove("transition-appear");
     document.querySelector(".condition").textContent = conditionData;
     document.querySelector(".location").textContent = locationData;
     document.querySelector(".temp").textContent = currentTempData.toFixed(0);
@@ -48,6 +49,7 @@ async function getApi(location) {
     document.querySelector(".weather-wrapper").classList.remove("transition");
     document.querySelector(".info-wrapper").classList.remove("transition");
   } catch (err) {
+    document.querySelector(".error").classList.add("transition-appear");
     console.log("Location not found!");
   }
 }
